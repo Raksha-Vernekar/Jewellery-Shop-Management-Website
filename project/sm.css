@@ -1,0 +1,102 @@
+.Log{
+    height:100%;
+    width:100%;
+    background-image:linear-gradient(rgba(141, 103, 20, 0.253),rgba(0,0,0,0.4)),url("https://news.bitcoin.com/wp-content/uploads/2017/07/Markets-Update-Bitcoin-Bulls-Are-Back-With-Vigorous-Energy.png");
+    background-position:center;
+    background-size:cover;
+    position: absolute;
+  }
+  .form-box{
+    width:380px;
+    height:480px;
+    position:relative;
+    margin:6% auto;
+    background: none ;
+    padding:5px;
+    overflow:hidden;
+  
+  
+  }
+  .button-box{
+    width:200px;
+    margin:35px auto;
+    position: relative;
+    box-shadow:0 0 20px 9px #fdf7f4ea;
+    border-radius: 30px;
+  }
+  .toggle-btn{
+    padding:10px 25px;
+    cursor:pointer;
+    background: transparent;
+    border:0;
+    outline:none;
+    position: relative;
+  }
+  span{
+    color: rgb(27, 13, 105);
+    font-size:12px;
+    bottom: 68px;
+    position: absolute;
+  }
+  #btn{
+    top:0;
+    left:0;
+    position:absolute;
+    width:110px;
+    height:100%;
+    background: linear-gradient(to right,#4d2806,#f3ef0c);
+    border-radius: 30px;
+    transition:.5s;
+  }
+  
+  #inputdefault {
+    margin-bottom: 20px;  
+  }
+  .social-icons{
+    margin:30px auto;
+    text-align:center;
+  }
+  .social-icons img{
+    width:30px;
+    margin:0 12px;
+    box-shadow: 0 0 20px 0 #f1e3e3f8;
+    cursor:pointer;
+    border-radius:50%
+  }
+  .input-group{
+    top:180px;
+    position:absolute;
+    width:280px;
+    transition: .5s
+  }
+  .input-field{
+    width:100%;
+    padding:10px o;
+    margin:5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgb(248, 244, 244);
+    outline :none;
+    background: transparent;
+  }
+  .submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor:pointer;
+    display:block;
+    margin:auto;
+    background:linear-gradient(to right,#4d2806,#f3ef0c);
+    border:0;
+    border-radius:30px;
+  
+  
+  }
+  #login{
+    left:50px;
+  
+  }
+  #reg{
+    left:450px;
+    
+  }
