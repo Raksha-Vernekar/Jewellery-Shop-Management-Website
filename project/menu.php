@@ -25,26 +25,26 @@ if (isset($_GET['logout']))
 
 if(isset($_POST["add_to_cart"]))  
  {
-  $dishname=$_POST['hidden_name'];
-  $dishpric=$_POST['hidden_price'];
-  $dishqty=$_POST['quantity'];
-  $idquery="select * from `menu` where `designname`='$dishname'";
+  $designname=$_POST['hidden_name'];
+  $designpric=$_POST['hidden_price'];
+  $designqty=$_POST['quantity'];
+  $idquery="select * from `menu` where `designname`='$designname'";
   $result34 = mysqli_query($con, $idquery);
   $val=mysqli_fetch_array($result34);
   $itemqty= $val['qty'];
-  $dishid=$val['id'];
-  if($itemqty-$dishqty>=0 && $dishqty>0){?>
+  $designid=$val['id'];
+  if($itemqty-$designqty>=0 && $designqty>0){?>
   <form action="dummyadd.php" id="myForm" method="POST" class="form-container" style="display:block;">
   
-  <p><?php echo $dishname?> will be added to your cart</p>
+  <p><?php echo $designname?> will be added to your cart</p>
   <button type="submit" class="btn" id="ok" name="ok">OK</input>
-  <input type="hidden" id="dishhidden" name="hid_name" value="<?php echo $dishname; ?>"/> 
-  <input type="hidden" id="dishhidden" name="hid_id" value="<?php echo $dishid; ?>"/> 
-  <input type="hidden" id="dishhidden" name="hid_price" value="<?php echo $dishpric; ?>"/> 
-  <input type="hidden" id="dishhidden" name="hid_qty" value="<?php echo $dishqty; ?>"/> 
+  <input type="hidden" id="designhidden" name="hid_name" value="<?php echo $designname; ?>"/> 
+  <input type="hidden" id="designhidden" name="hid_id" value="<?php echo $designid; ?>"/> 
+  <input type="hidden" id="designhidden" name="hid_price" value="<?php echo $designpric; ?>"/> 
+  <input type="hidden" id="designhidden" name="hid_qty" value="<?php echo $designqty; ?>"/> 
   <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form><?php }
-  else if($dishqty<=0){
+  else if($designqty<=0){
     echo '<script>alert("Quantity must be greater than 0!")</script>';
   }
   else{
@@ -326,7 +326,7 @@ if($b==0){
 <?php
 if(isset($_POST["searchbtn"]))
 {
-  $searchdish=$_POST["search"];
+  $searchdesign=$_POST["search"];
   $idquery="select * from `menu` where `designname` like '%$searchdish%' and avail_status=0";
   $result34 = mysqli_query($con, $idquery);
   while($val=mysqli_fetch_array($result34))
